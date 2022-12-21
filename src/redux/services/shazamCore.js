@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react"
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const shazamCoreApi = createApi({
   reducerPath: "shazamCoreApi",
