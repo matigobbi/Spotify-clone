@@ -82,35 +82,6 @@ const TopPlay = () => {
           ))}
         </div>
       </div>
-      <div className=" flex flex-row justify-between items-center">
-        <div className="flex flex-row justify-between items-center">
-          <h2 className="text-white font-bold text-2xl">Top Artist</h2>
-          <Link to="/top-artist">
-            <p className="text-gray-300 text-base cursor-pointer">See more</p>
-          </Link>
-        </div>
-        <Swiper
-          slidesPerView="auto"
-          spaceBetween={15}
-          freeMode
-          centeredSlides
-          centeredSlidesBounds
-          modules={[FreeMode]}
-          className="mt-4"
-        >
-          {topPlays?.slice(0, 4).map((artist) => (
-            <SwiperSlide
-              key={artist?.key}
-              style={{ width: '25%', height: 'auto' }}
-              className="shadow-lg rounded-full animate-slideright"
-            >
-              <Link to={`/artists/${artist?.artists[0]?.adamid}`}>
-                <img src={artist?.images?.background} alt="Name" className="rounded-full w-full object-cover" />
-              </Link>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
     </div>
   );
 };
